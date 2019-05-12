@@ -1,0 +1,466 @@
+/* ********************** CORE Styles  *********************** */
+/* *THIS SECTION INCLUDES ALL THE COMMON STYLES OF THE WEBSITE * */
+
+/* *Main Body Styling* */
+body {
+  margin: 2vh auto; /* *5vh or 6vh for Mobile, 10vh for Desktop* */
+  /*background: rgb(246, 246, 247);*/
+  background: #f3f2ef;
+  width: 80%;
+  max-width: 1280px;
+}
+
+/* *Common images style applied to every image in the website* */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* *Unordered List Styling* */
+ul {
+  list-style: none;
+  padding: 0%;
+}
+
+/* *Main Area of the Website *
+/* *The website it split in section (a,b,c,d), each section has its own functionality* */
+/* * The main reason for that is to be well structure and easily recognizable in the future for future developers */
+
+/*  *THE LOGO STYLING--> Header SECTION * */
+header {
+  height: 23vh;
+  width: 22vh;
+  margin: auto;
+  position: relative;
+  margin-top: 10vh;
+  margin-bottom: 6vh;
+}
+
+/* *Section-A contains all the text below the logo* */
+section#suid-introduction {
+  max-width: 75vh;
+  margin: auto;
+}
+
+.suid-text {
+  padding: 3vh;
+  color: #333333;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+  max-height: 245px;
+  text-align: center;
+}
+
+.suid-role {
+  padding: 2vh;
+  color: #333333;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: none;
+  font-size: 1rem;
+  max-height: 245px;
+  text-align: center;
+}
+
+/* *HR TAGS RULES* */
+hr.suid-top-line {
+  max-width: 45vh;
+  padding: 0;
+  border: none;
+  height: 1.5px;
+  background-image: linear-gradient(
+    to right,
+    rgba(145, 143, 143, 0.062),
+    rgba(85, 79, 79, 0.479),
+    rgba(145, 143, 143, 0.062)
+  );
+}
+
+hr.suid-bottom-line,
+.suid-middle-line {
+  margin: 3vh auto;
+  max-width: 75vh;
+  padding: 0;
+  border: none;
+  height: 1.5px;
+  background-image: linear-gradient(
+    to right,
+    rgba(145, 143, 143, 0.062),
+    rgba(85, 79, 79, 0.479),
+    rgba(145, 143, 143, 0.062)
+  );
+}
+
+/* *MENU* */
+/* *The class which cntains the left side image */
+/* *Image style and effects can be applied here */
+
+.suid-split-half {
+  margin: 5vh auto;
+}
+
+/* *Text content wraps * */
+.suid-title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555555;
+  margin-top: 3vh;
+}
+
+/* *the class that completes suid-text class for text on the wraps **/
+.suid-content-wrap {
+  text-align: justify;
+  margin: 3vh auto;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* *Vertical Text on the images * */
+.suid-vert-text {
+  position: absolute;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  color: rgb(255, 255, 254);
+  text-shadow: 0 2px 0 black;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  transform: rotate(-180deg);
+  font-size: 1.5rem;
+}
+
+/* * Effect/Transition of the picture on hover * */
+.suid-menu-img:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), 0 25px 25px rgba(0, 0, 0, 0.22);
+  -webkit-transform: scale(1.4);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* * styles the image container * */
+.suid-menu-img {
+  display: inline-block;
+  margin: auto 0;
+  width: 100%;
+  height: 230px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+/* *LEFT IMAGE* */
+.suid-cover-img > .suid-left > .suid-menu-website-img {
+  background: linear-gradient(rgba(192, 191, 191, 0.445), rgba(0, 0, 0, 0.1)),
+    url(../img/2019-SUID-WEB.jpg);
+  background-size: cover;
+}
+
+/* *RIGHT IMAGE* */
+.suid-cover-img > .suid-right > .suid-menu-software-img {
+  background: linear-gradient(rgba(20, 20, 20, 0), rgba(90, 90, 90, 0)),
+    url(../img/2019-SUID-LOGICIEL.jpg);
+  background-size: cover;
+}
+
+/* *Magic Checkbox* */
+.suid-hack-input {
+  display: none;
+}
+
+/* *Website Trigger* */
+#suid-website {
+  display: none;
+}
+
+#suid-website-trigger:checked ~ #suid-website {
+  display: inline-block;
+}
+
+#suid-website-trigger:checked ~ div#suid-menu {
+  display: none;
+}
+
+/* *Software Trigger* */
+#suid-software {
+  display: none;
+}
+
+#suid-software-trigger:checked ~ #suid-software {
+  display: inline-block;
+}
+
+#suid-software-trigger:checked ~ div#suid-menu {
+  display: none;
+}
+
+.suid-left,
+.suid-right {
+  margin: auto 0;
+}
+
+/* * Team Members Section* */
+/* * The cards * */
+.suid-content-card {
+  position: relative;
+  margin: 5vh auto;
+  background: rgb(255, 254, 255);
+  height: 45vh;
+  width: 37vh;
+  border-radius: 5px;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.suid-card-image {
+  position: relative;
+  height: 37vh;
+  transition: 0.7s;
+  z-index: 1;
+}
+
+.suid-card-image:hover {
+  height: 32vh;
+}
+
+.suid-card-line {
+  margin: auto;
+  max-width: 35vh;
+  padding: 0.5px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    rgba(145, 143, 143, 0.062),
+    rgba(85, 79, 79, 0.479),
+    rgba(145, 143, 143, 0.062)
+  );
+}
+
+#suid-first-member {
+  background: linear-gradient(rgba(192, 191, 191, 0.445), rgba(0, 0, 0, 0.1)),
+    url(../img/apple-black-and-white-camera-6482.jpg);
+  background-size: cover;
+}
+
+#suid-second-member {
+  background: linear-gradient(rgba(192, 191, 191, 0.445), rgba(0, 0, 0, 0.1)),
+    url(../img/apple-black-and-white-camera-6482.jpg);
+  background-size: cover;
+}
+
+#suid-third-member {
+  background: linear-gradient(rgba(192, 191, 191, 0.445), rgba(0, 0, 0, 0.1)),
+    url(../img/apple-black-and-white-camera-6482.jpg);
+  background-size: cover;
+}
+
+#suid-forth-member {
+  background: linear-gradient(rgba(192, 191, 191, 0.445), rgba(0, 0, 0, 0.1)),
+    url(../img/apple-black-and-white-camera-6482.jpg);
+  background-size: cover;
+}
+
+.suid-member-name {
+  position: relative;
+  margin: 3vh auto 1vh auto;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  animation: 0.8s 0.7s forwards ease-in;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2b2a2a;
+}
+
+.suid-content-card > hr {
+  margin: auto;
+  height: 1px;
+  width: 85%;
+}
+
+#suid-about-team {
+  width: 70%;
+  margin: 0 auto;
+  padding: 5vh;
+}
+.suid-about-team-text {
+  padding: 10px;
+  color: #555555;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  max-height: 245px;
+  text-align: center;
+}
+
+/* *SUID offer Cards * */
+/* ***********************/
+/* *Positioned in relation to the main body **/
+
+.suid-cards-container {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.suid-card-content {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background: #599ad3;
+  border-radius: 4px;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
+  margin: 5vh auto;
+}
+
+.suid-price-title {
+  padding: 30px;
+  color: #f3f2ef;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.suid-price {
+  background: #f3f2ef;
+  position: relative;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: #555555;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+}
+
+.suid-offers {
+  color: #f3f2ef;
+  font-family: "Raleway", sans-serif;
+  min-height: 20vh;
+}
+
+/* * MEDIA QUERIES*  */
+/** Larger than phablet * */
+@media (min-width: 550px) and (max-width: 756px) {
+}
+
+@media (min-width: 756px) and (max-width: 924px) {
+  /* * This body style set every component into the middle of the page */
+
+  .suid-menu-img {
+    height: 330px;
+  }
+
+  .suid-team {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+  }
+
+  /* * Offers * */
+  /* ********************/
+
+  .suid-price-offers {
+    position: absolute;
+    background: rgb(255, 254, 255);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2),
+      0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 6vh auto;
+    height: 40vh;
+    width: 80%;
+    z-index: -1;
+  }
+
+  /* * Position related to the main container suid-price-offers container * */
+  .suid-cards-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15%;
+    top: 20%;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* * Larger than desktop * */
+/* * Increased images,text * */
+@media (min-width: 924px) {
+  body {
+    width: 85%;
+  }
+
+  .suid-menu-img {
+    height: 330px;
+  }
+
+  .suid-split-half {
+    display: grid;
+    position: relative;
+    margin: 6vh auto; /* * 7vh from here and 3vh from hr,Total margin =10vh **/
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 7%;
+  }
+
+  .suid-middle-line {
+    display: none;
+  }
+
+  section#suid-introduction {
+    max-width: 120vh;
+  }
+
+  .suid-vert-text {
+    font-size: 2rem;
+  }
+
+  .suid-title {
+    margin-top: 4vh;
+  }
+
+  /* *Team Members Section on desktop 2xcolumns* */
+  .suid-team {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .suid-price-offers {
+    position: absolute;
+    background: rgb(255, 254, 255);
+    box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2),
+      0 0 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 6vh auto;
+    height: 40vh;
+    width: 80%;
+    z-index: -1;
+  }
+
+  /* * Position related to the main container suid-price-offers container * */
+  .suid-cards-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15%;
+    top: 20%;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
