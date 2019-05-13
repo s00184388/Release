@@ -3,14 +3,16 @@
 
 /* *Main Body Styling* */
 
+/* * Trigger for switching the columns on mobile **/
 .trigger {
   display: flex;
   flex-direction: column-reverse;
 }
+
 body {
-  /* *5vh or 6vh for Mobile, 10vh for Desktop* */
   background: #f3f2ef;
   margin: 2vh auto;
+  font-family: "Raleway", sans-serif;
 }
 
 /* *Common images style applied to every image in the website* */
@@ -20,17 +22,11 @@ img {
   height: auto;
 }
 
-/* *Unordered List Styling* */
-ul {
-  list-style: none;
-  padding: 0%;
-}
-
 /* *Main Area of the Website *
-/* *The website it split in section (a,b,c,d), each section has its own functionality* */
+/* *The website it split in sections, each section has its own functionality* */
 /* * The main reason for that is to be well structure and easily recognizable in the future for future developers */
 
-/*  *THE LOGO STYLING--> Header SECTION * */
+/*  *THE LOGO STYLING--> Header SECTION* */
 header {
   height: 23vh;
   width: 22vh;
@@ -40,19 +36,19 @@ header {
   margin-bottom: 9vh;
 }
 
-/* *Section-A contains all the text below the logo* */
+/* *Section-Introduction contains all the text below the logo* */
 section#suid-introduction {
-  width: 70%;
+  width: 90%;
   margin: auto;
 }
 
+/* *Text between hr styling * */
 .suid-text {
   padding: 2vh;
   color: rgb(102, 102, 102);
   font-weight: 500;
-  font-family: "Raleway", sans-serif;
-  font-size: 0.8rem;
-  text-transform: none;
+  font-style: italic;
+  font-size: 0.9rem;
   text-align: center;
 }
 
@@ -77,41 +73,41 @@ hr.suid-bottom-line {
 }
 
 /* *MENU* */
-/* *The class which cntains the left side image */
+/* *The class which contains the left side image */
 /* *Image style and effects can be applied here */
 
 #suid-menu-container {
-  width: 80%;
+  width: 90%;
   margin: 3vh auto;
 }
 
 /* *Text content wraps * */
+/* * Section that contains the text that is shown by clicking the images **/
+
+.suid-title {
+  padding: 1vh;
+  letter-spacing: 1px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #555555;
+}
 
 .suid-content-wrap-right {
   position: relative;
-  max-height: 250px;
   margin-top: 2vh;
   text-align: justify;
   animation-name: rightFadeInOut;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .suid-content-wrap-left {
   position: relative;
-  max-height: 250px;
   margin-top: 2vh;
   text-align: justify;
   animation-name: leftFadeInOut;
-  animation-duration: 3s;
-}
-
-.suid-title {
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-align: center;
-  color: #555555;
+  animation-duration: 2s;
 }
 
 .suid-text-wrap {
@@ -119,7 +115,6 @@ hr.suid-bottom-line {
   padding: 2vh 0;
   color: #333333;
   font-weight: 500;
-  font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
   text-transform: none;
   text-align: justify;
@@ -138,14 +133,14 @@ hr.suid-bottom-line {
   text-orientation: mixed;
   text-align: center;
   transform: rotate(-180deg);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 /* * Effect/Transition of the picture on hover * */
 .suid-menu-img:hover {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3), 0 25px 25px rgba(0, 0, 0, 0.22);
-  -webkit-transform: scale(1.4);
-  transform: scale(1.03);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -159,7 +154,7 @@ hr.suid-bottom-line {
   border-radius: 5px;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  transition: 0.5s ease-in;
+  transition: 0.4s ease-in-out;
 }
 
 /* *LEFT IMAGE* */
@@ -207,11 +202,13 @@ hr.suid-bottom-line {
   display: none;
 }
 
-/* * Team Members Section* */
-/* * The cards * */
+/***** Team Members Section *****/
+
+/* * Cards container* */
+
 .suid-team-container {
   position: relative;
-  margin: 6vh auto;
+  margin: 1vh auto;
   width: 100%;
   display: inline-block;
 }
@@ -225,21 +222,21 @@ hr.suid-bottom-line {
 
 #suid-about-team-left {
   animation-name: leftFadeInOut;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 #suid-about-team-right {
   animation-name: rightFadeInOut;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .suid-about-team-text {
   position: relative;
   color: #555555;
+  padding: 3vh;
   font-weight: 500;
-  font-family: "Raleway", sans-serif;
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   max-height: 245px;
   text-align: center;
 }
@@ -253,32 +250,17 @@ hr.suid-bottom-line {
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2), 0 0 1rem rgba(0, 0, 0, 0.2);
   overflow: hidden;
   animation-name: FadeInOut;
-  animation-duration: 6s;
+  animation-duration: 3s;
 }
 
-.suid-content-card:hover .suid-content-card {
-  transform: rotateY(180deg);
-}
+/* * The part on HOVER **/
 
 .suid-profile-content {
   position: relative;
-  display: inline-block;
   width: 100%;
   height: 100%;
   opacity: 0;
   background-color: rgba(46, 46, 46, 0.575);
-  -webkit-transition: all 2s;
-  transition: all 2s;
-}
-
-.text {
-  text-decoration: none;
-  font-family: "Raleway", sans-serif;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
 }
 
 .suid-profile-text {
@@ -289,14 +271,13 @@ hr.suid-bottom-line {
 
 .suid-profile-text:hover {
   animation-name: topFadeOut;
-  animation-duration: 3s;
+  animation-duration: 2s;
 }
 
 .suid-role {
   padding: 2vh;
   color: #fff;
   font-weight: 600;
-  font-family: "Raleway", sans-serif;
   font-size: 1.1rem;
   text-shadow: 1 2px 1 rgb(92, 91, 91);
   text-transform: uppercase;
@@ -308,22 +289,34 @@ hr.suid-bottom-line {
   padding: 0;
   font-size: 0.8rem;
   margin: auto 1vh;
-  font-family: "Raleway", sans-serif;
   color: #fff;
   text-shadow: 1 2px 1 rgb(92, 91, 91);
   font-style: italic;
   text-align: center;
 }
 
+.text {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .suid-website-btn {
   position: relative;
-  width: 60%;
+  width: 70%;
   margin: 2vh auto;
   padding: 1vh;
-  border: 2px solid #ffffff;
-  box-shadow: inset 0px 0px 15px 1px rgba(128, 128, 128, 1);
-  border-radius: 10px;
+  border: 1px solid #ffffff;
+  box-shadow: inset 0px 0px 15px 1px rgb(173, 172, 172);
+  border-radius: 20px;
   text-align: center;
+}
+
+.suid-website-btn:hover {
+  color: #555555;
+  background-color: #f3f2ef;
 }
 
 .suid-content-card:hover .suid-profile-content {
@@ -358,11 +351,10 @@ hr.suid-bottom-line {
   position: relative;
   margin: 2vh auto 1vh auto;
   text-transform: uppercase;
+  font-size: 0.9rem;
   text-align: center;
-  font-family: "Raleway", sans-serif;
-  font-size: 0.8rem;
   font-weight: 700;
-  color: #2b2a2a;
+  color: #555555;
 }
 
 .suid-card-line {
@@ -390,6 +382,8 @@ hr.suid-bottom-line {
 
 .suid-card-content {
   display: block;
+  position: relative;
+  padding: 5%;
   text-align: center;
   background: #599ad3;
   border-radius: 4px;
@@ -397,31 +391,31 @@ hr.suid-bottom-line {
   margin: 3vh auto;
   width: 80%;
   animation-name: FadeInOut;
-  animation-duration: 6s;
+  animation-duration: 3s;
 }
 
 .suid-price-title {
-  padding: 30px;
+  position: relative;
+  padding: 20px;
   color: #f3f2ef;
-  font-weight: 500;
-  font-family: "Raleway", sans-serif;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 1.2rem;
 }
 
 .suid-price {
+  position: relative;
   background: #f3f2efe1;
   position: relative;
-  padding: 20px;
+  padding: 10px;
   margin: 0 auto;
-  border-radius: 5px;
   color: #555555;
   font-weight: 600;
-  font-family: "Raleway", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .suid-offers {
+  position: relative;
   color: #f3f2ef;
   font-family: "Raleway", sans-serif;
   min-height: 20vh;
@@ -430,7 +424,7 @@ hr.suid-bottom-line {
 .suid-price-btn {
   position: relative;
   width: 60%;
-  margin: 2vh auto;
+  margin: auto;
   padding: 1vh;
   border: 2px solid #ffffff;
   box-shadow: inset 0px 0px 15px 1px rgba(255, 255, 255, 0.767);
@@ -650,7 +644,6 @@ there.
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -659,7 +652,7 @@ there.
 @keyframes topFadeOut {
   0% {
     position: relative;
-    top: 0rem;
+    top: 0%;
     opacity: 0;
   }
 
